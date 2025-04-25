@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+@layer base {
+  body {
+    @apply bg-pink-50 overflow-hidden;
+  }
+}
+
+@layer components {
+  .font-handwriting {
+    font-family: 'Dancing Script', cursive;
+  }
+}
+
+@layer utilities {
+  .bg-cork {
+    background-image: url('https://images.pexels.com/photos/301717/pexels-photo-301717.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 0.8s ease forwards;
+  }
+  
+  .animate-fadeInDelay {
+    animation: fadeIn 0.8s ease 0.3s forwards;
+    opacity: 0;
+  }
+  
+  .animate-fadeInDelay2 {
+    animation: fadeIn 0.8s ease 0.6s forwards;
+    opacity: 0;
+  }
+  
+  .animate-fadeInDelay3 {
+    animation: fadeIn 0.8s ease 0.9s forwards;
+    opacity: 0;
+  }
+  
+  .animate-twinkle {
+    animation: twinkle 3s ease-in-out infinite;
+  }
+  
+  .animate-twinkle-delay {
+    animation: twinkle 3s ease-in-out 1.5s infinite;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px 2px rgba(255, 165, 0, 0.3);
+  }
+  to {
+    box-shadow: 0 0 20px 10px rgba(255, 165, 0, 0.5);
+  }
+}
